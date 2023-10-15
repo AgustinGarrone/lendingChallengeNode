@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "c1b3916e-f5b7-4ce2-97e4-f0a9ca547a51",
+		"name": "Lending Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22598894"
+	},
+	"item": [
+		{
+			"name": "client",
+			"item": [
+				{
+					"name": "Save Client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Daniela\" , \r\n    \"lastname\":\"Ayala\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/V1/client",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"V1",
+								"client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Client",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/V1/client/652c5b616728563ad161678b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"V1",
+								"client",
+								"652c5b616728563ad161678b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "lending",
+			"item": [
+				{
+					"name": "Create Lending",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientId\":\"652c5b616728563ad161678b\",\r\n    \"lendingAmount\":\"30000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/V1/lending",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"V1",
+								"lending"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Active Lendings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/V1/lending/active",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"V1",
+								"lending",
+								"active"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mark Lending As Paid",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/V1/lending/652c5ca2bf39603bfc9b4271/markPaid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"V1",
+								"lending",
+								"652c5ca2bf39603bfc9b4271",
+								"markPaid"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
